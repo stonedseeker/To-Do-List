@@ -4,6 +4,7 @@
   "description": "It is a simple to do list to monitor and check daily tasks.",
   "main": "index.js",
   "type": "module",
+  "homepage": "https://stonedseeker.github.io/To-Do-List",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
