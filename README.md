@@ -4,4 +4,6 @@ A simple TODO list made using EJS and Node
 - CD into the cloned repository and `npm i`
 - `node index.js` to run it 
 ## TODO
-I am trying to find a way to host EJS files through git hub pages, even if its static, for this I put a yml file in the workflow section but it still doesn't work, just hosts the readme file : ' )
+- I am currently using AWS Beanstalk service to host this, I think there might be a way to use github actions to host non static sited too, I have tried adding a yml file in the workflow, but it doesn't work.
+- Its currently using a list to show the tasks, I want to use a json file to append new tasks.
+- The deleting task button doesn't work 😬
