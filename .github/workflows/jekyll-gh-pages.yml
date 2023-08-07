@@ -16,16 +16,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  
+          node-version: '18'
 
       - name: Install Dependencies
-        run: npm install  # Use 'yarn install' if you're using Yarn
+        run: npm install  
 
       - name: Build App
-        run: npm run build  # Use the appropriate command to build your app into static files
+        run: npm run build  
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: /
+          publish_dir: ./ 
+
