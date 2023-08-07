@@ -1,0 +1,56 @@
+.gradient-background {
+    background: linear-gradient(300deg, #e91e63, #9c27b0, #673ab7 );/*00bfff*/
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+#title {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#middle-container{
+  
+}
+
+#add-task-btn{
+  font-weight: 1000;
+  font-family: merriweather;
+  color:aliceblue;
+  padding: 0;
+  font-size: 17px;
+  
+}
+
+h1 {
+  font-family: sacramento, cursive;
+}
+
+#taskBox{
+  border-color: #673ab7;
+
+}
+
+#bigBox{
+  height: 700px;
+  width: 1050px;
+  border-radius: 6px;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}

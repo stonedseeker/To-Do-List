@@ -1,0 +1,44 @@
+<%- include('partials/header.ejs') %>
+
+  <section id='title' class="gradient-background" style="height: 100vh;">
+    <div>
+      <h1 class="display-1 fw-medium text-light text-center">Vybhv's</h1><br>
+    </div>
+    <div>
+      <p class="text-light text-center" style="font-size:x-large;">A simple to-do list</p>
+    </div>
+  </section>
+
+  <section id="middle-container">
+    <div class="container pt-5" style="height: 100vh;">
+      <form action="/addNew" method="POST">
+        <div class="d-flex flex-row align-items-center">
+          <input type="text" class="form-control form-control-lg mx-5 py-4" id="taskInput" name="taskDescription"
+            placeholder="Add new...">
+          <button id="add-task-btn" type="submit" class="btn button-outline-white gradient-background py-4 px-5">Add</button>
+        </div>
+      </form>
+
+      <div class="container align-items-start">
+        <div class="d-flex flex-column mt-3 mx-5 py-4 border border-dark" id="bigBox">
+          
+          <div class="d-flex flex-row align-items-center mb-10 mx-3 justify-content-between" id="taskBox">
+            <div class="container">
+              <% if (locals.todo) { %>
+                <% for (let i = 0; i < todo.length; i++) { %>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h1><%= todo[i] %></h1>
+                  <input class="btn" style="color: red; font-size: 1.5rem;" type="reset" value="x">
+                  </div>
+                <% } %>
+              <% } else { %>
+                <h5>No tasks yet.</h5> 
+              <% } %>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <%- include('partials/footer.ejs') %>
