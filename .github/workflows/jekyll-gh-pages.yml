@@ -3,7 +3,7 @@ name: Deploy To-Do-List App
 on:
   push:
     branches:
-      - main  # Set this to your main branch name
+      - main  
 
 jobs:
   deploy:
@@ -26,3 +26,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./ 
+
+      - run: |
+          sed -i "6i\ \"homepage\": \"/To-Do-List\"," ./package.json
+
+          
+  
